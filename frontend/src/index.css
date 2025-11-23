@@ -1,0 +1,60 @@
+/* Reset default margins and base box model */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+* { box-sizing: border-box; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom keyframes and animations */
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Add any global custom styles below */
+.pulse-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.45;
+  animation: orbFloat 6s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.orb1 {
+  width: 320px;
+  height: 320px;
+  background: #00ffff;
+  top: 10%;
+  left: 15%;
+}
+
+.orb2 {
+  width: 260px;
+  height: 260px;
+  background: #00ff88;
+  bottom: 15%;
+  right: 15%;
+}
+
+@keyframes orbFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-25px); }
+}
+.cursor-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--bg-x, 50%) var(--bg-y, 50%),
+    rgba(0, 255, 255, 0.18),
+    transparent 40%
+  );
+  mix-blend-mode: screen;
+  transition: background 0.1s ease-out;
+}
+
