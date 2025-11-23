@@ -112,7 +112,7 @@ export default function Portfolio() {
 
   // Scroll reveal
   useEffect(() => {
-    const elements = document.querySelectorAll(".reveal-on-scroll");
+    const elements = document.querySelectorAll(".reveal-on-scroll, .line-reveal");
     if (!("IntersectionObserver" in window)) {
       elements.forEach((el) => el.classList.add("visible"));
       return;
@@ -667,6 +667,22 @@ export default function Portfolio() {
           filter:blur(0.5px);
           transition:transform 0.15s ease-out;
         }
+          .line-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+          }
+
+          .line-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          .line-reveal:nth-child(1) { transition-delay: 0.1s; }
+          .line-reveal:nth-child(2) { transition-delay: 0.3s; }
+          .line-reveal:nth-child(3) { transition-delay: 0.5s; }
+          .line-reveal:nth-child(4) { transition-delay: 0.7s; }
+
       `}</style>
 
       <div style={styles.container}>
@@ -756,8 +772,7 @@ export default function Portfolio() {
               Hi, I'm <span style={styles.gradient}>Akhil</span>
             </h1>
             <p style={styles.heroSubtitle}>
-              Full-Stack Developer & UI/UX Enthusiast crafting beautiful digital
-              experiences with clean code and creative design.
+              Full-Stack Engineer crafting scalable, user-driven digital experiences.
             </p>
             <button
               className="cta-btn"
@@ -798,7 +813,44 @@ export default function Portfolio() {
               style={{ opacity: 0.6 }}
             />
           </div>
+            </section>
+        <section id="about" style={styles.section}>
+          <h2 style={styles.sectionTitle}>
+            About <span style={styles.gradient}>Me</span>
+          </h2>
+
+          <div
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto",
+              fontSize: "1.2rem",
+              lineHeight: "1.8",
+              color: "#ccc",
+              textAlign: "center",
+            }}
+          >
+            <p className="line-reveal">
+              I’m a passionate <span style={{ color: "#00ffff" }}>Full-Stack Developer</span> who loves
+              building scalable systems, intuitive interfaces, and products that people enjoy using.
+            </p>
+
+            <p className="line-reveal">
+              I specialise in transforming complex problems into simple, elegant engineering solutions
+              across frontend and backend environments.
+            </p>
+
+            <p className="line-reveal">
+              My strengths include strong problem-solving, fast learning ability, deep focus, and a drive
+              to craft clean, maintainable systems that scale confidently.
+            </p>
+
+            <p className="line-reveal">
+              As an engineer, my mission is to build meaningful digital experiences and continuously move
+              toward technical excellence with every project I take on.
+            </p>
+          </div>
         </section>
+
 
         {/* Projects */}
         <section id="projects" style={styles.section}>
