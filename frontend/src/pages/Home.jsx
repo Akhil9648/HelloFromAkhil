@@ -813,7 +813,7 @@ export default function Portfolio() {
                 )
               }
               >
-              Download CV
+              Download Resume
             </button>
           </div>
           <div
