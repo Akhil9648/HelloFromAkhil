@@ -220,6 +220,24 @@ export default function Portfolio() {
         "https://media.istockphoto.com/id/1309878877/photo/business-people-meeting-to-discuss-strategy-and-plan-for-business-and-investment.jpg?s=612x612&w=0&k=20&c=ofs0xOOKqMXSlVWjZS8o0XAmg4_Md5p39owY5dLGQWA=",
       link: "#",
     },
+    {
+      title: "Bangluru House Price Predictor",
+      description:
+        "A machine learning model to predict house prices in Bangluru.",
+      tech: ["Python", "Scikit-learn", "Pandas", "Flask"],
+      image:
+        "https://www.quantumrealty.co.in/wp-content/uploads/2019/06/Alta-vista.jpg",
+      link: "https://housepriceprediction-iejn7ecsyfmzx6p6ejzc8v.streamlit.app/",
+    },
+    {
+      title: "Whatsapp Chat Analyzer",
+      description:
+        "A machine learning model to analyze whatsapp chat data.",
+      tech: ["Python", "Numpy", "Pandas", "Matplotlib", "Seaborn", "Streamlit","Sklearn"],
+      image:
+        "https://www.shutterstock.com/shutterstock/photos/1774750085/display_1500/stock-vector-analysis-report-message-chat-icon-vector-1774750085.jpg",
+      link: "https://whatsappchatanalyzer-3nb3uvgvmmrgdt5ser7vaz.streamlit.app/",
+    }
   ];
 
   const skills = [
@@ -794,7 +812,7 @@ export default function Portfolio() {
                   "https://drive.google.com/file/d/1pXCqZvq_XJ3oo90lTf2KC-ucGRYzSGp_/view"
                 )
               }
-            >
+              >
               Download CV
             </button>
           </div>
@@ -805,13 +823,13 @@ export default function Portfolio() {
               left: "50%",
               transform: "translateX(-50%)",
             }}
-          >
+            >
             <ChevronDown
               className="chevron"
               size={40}
               color="#00ffff"
               style={{ opacity: 0.6 }}
-            />
+              />
           </div>
             </section>
         <section id="about" style={styles.section}>
