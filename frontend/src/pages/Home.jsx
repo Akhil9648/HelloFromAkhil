@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import {
   Github,
   Linkedin,
@@ -551,6 +552,7 @@ export default function Portfolio() {
 
   return (
     <>
+      <Analytics />
       <style>{`
         @keyframes gradientMove {
           0%,100% { background-position: 0% 50%; }
